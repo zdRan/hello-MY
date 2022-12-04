@@ -7,11 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
       </head>
       <body>
-        <div id="app" style="width:100%;text-align:center;background-color:green;">
-            <div style="width: 90%; margin: 0 auto; text-align:center; background-color: red;">
-                <%- partial('partial/header')%> 
-            </div>
-            <div > <%- body  %> </div>
+        <div id="app">
+          <v-app>
+			<%- partial('partial/header')%> 
+            <v-main>
+              <div style="width: 70%; margin: 0 auto; text-align:center;">
+                <%- body %> 
+              </div>
+            </v-main>
+			<%- partial('partial/footer')%> 
+          </v-app>
         </div>
       
         <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>

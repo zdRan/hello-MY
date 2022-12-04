@@ -1,53 +1,28 @@
-<div>
+<div style="width: 85%; margin: 0 auto; text-align:center;">
+  <div style="margin-bottom: 3%;">
     <v-card
-    :loading="loading"
-    class="mx-auto my-12"
     max-width="100%"
     elevation="24"
-  >
-    <template slot="progress">
-      <v-progress-linear
-        color="deep-purple"
-        height="10"
-        indeterminate
-      ></v-progress-linear>
-    </template>
+    shaped
+>
 
-    <v-img
-      height="250"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
 
-    <v-card-title>U+2647's blog</v-card-title>
-    <v-card-text style="text-align: left;">
+    <v-card-title>
+      U+2647's blog
+    </v-card-title>
+    <v-card-subtitle style="text-align: left;">
         一个进化了 5 年的 Java 程序猿
-    </v-card-text>
-    <v-divider class="mx-10"></v-divider>
-    <v-card-title>Skill labels</v-card-title>
-    <v-card-text>
-      <v-chip-group
-        v-model="selection"
-        active-class="deep-purple accent-4 white--text"
-        column
-      >
-        <v-chip>Java</v-chip>
-
-        <v-chip>7:30PM</v-chip>
-
+    </v-card-subtitle>
+    <v-divider class="success"></v-divider>
+    <v-card-text style="text-align: left;">
+      <span color = "accent">Skill labels</span>
+      <v-chip-group>
+        <v-chip class="success">Java</v-chip>
+        <v-chip>Spring boot</v-chip>
         <v-chip>8:00PM</v-chip>
-
         <v-chip>9:00PM</v-chip>
       </v-chip-group>
     </v-card-text>
-
-    <v-card-actions>
-      <v-btn
-        color="deep-purple lighten-2"
-        text
-        @click="reserve"
-      >
-        Reserve
-      </v-btn>
-    </v-card-actions>
   </v-card>
+</div>
 </div>
