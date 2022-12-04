@@ -8,17 +8,15 @@
       </head>
       <body>
         <div id="app">
-          <v-app>
-			<%- partial('partial/header')%> 
-            <v-main>
-              <div style="width: 70%; margin: 0 auto; text-align:center;">
-                <%- body %> 
-              </div>
-            </v-main>
-			<%- partial('partial/footer')%> 
-          </v-app>
+			<v-app>
+				<%- partial('partial/header')%> 
+				<v-main style="width: 55%; margin: 0 auto; text-align:center;">
+					<%- body %> 
+				</v-main>
+				<%- partial('partial/footer')%> 
+			</v-app>			
         </div>
-      
+		
         <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
         <script>
