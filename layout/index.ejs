@@ -1,18 +1,19 @@
 <% site.posts.forEach(function(post){ %>
-    <v-card max-width="100%" elevation="24" style="margin-bottom: 3%;">
-        <v-card-title>
-            <%- post.title %>
+    <v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" 
+    href="<%= url_for(post.path) %>">
+        <v-card-title >
+            <span ><%- post.title %></span>
         </v-card-title>
+        <v-card-subtitle style="text-align: left;">
+            <%- post.description %>
+        </v-card-subtitle>
         <v-divider class="success"></v-divider>
         <v-chip-group>
             <% if (post.tags && post.tags.length){ %>
                 <% post.tags.forEach(function(tag){ %>	
-                    <v-chip  outlined color="success lighten-1" class=" ma-2"><%- tag.name %></v-chip>
+                    <v-chip outlined color="success lighten-1" class="ma-2"><%- tag.name %></v-chip>
                 <%});%>
             <% } %>
         </v-chip-group>
     </v-card>
 <% }); %>
-
-
-

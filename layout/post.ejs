@@ -1,0 +1,28 @@
+<!-- Highlight.js -->
+<link rel="stylesheet"
+      href="//cdn.bootcss.com/highlight.js/9.2.0/styles/tomorrow.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js">
+</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<v-card max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-card-title >
+        <span ><%- page.title %></span>
+    </v-card-title>
+    <v-card-subtitle style="text-align: left;">
+        <%- page.description %>
+    </v-card-subtitle>
+    <v-divider class="success"></v-divider>
+    <v-chip-group>
+        <% if (page.keywords && page.keywords.length){ %>
+            <% page.keywords.forEach(function(keyword){ %>	
+                <v-chip outlined color="success lighten-1" class="ma-2"><%- keyword %></v-chip>
+            <%});%>
+        <% } %>
+    </v-chip-group>
+    <v-card-text class="text-justify">
+        <%- page.content %>
+    </v-card-text>
+</v-card>
