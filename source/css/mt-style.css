@@ -1,0 +1,37 @@
+#post_container h1 {
+    margin: 1em 0 15px;
+    color: #212121
+}
+#post_container h2 {
+    margin: 1em 0 15px;
+    color: #212121
+}
+
+#post_container h3 {
+    margin: 1em 0 15px;
+    color: #212121
+}
+
+#post_container h4 {
+    margin: 1em 0 15px;
+    color: #212121
+}
+
+#post_container h5 {
+    margin: 1em 0 15px;
+    color: #212121
+}
+
+#post_container a:link {
+    color: primary;
+    text-decoration:none;
+}
+#post_container a:visited {
+    color: success;
+    text-decoration:none;
+}
+#post_container hr {
+    background-color: #4caf50;
+    border: none;
+    height:1px;
+}

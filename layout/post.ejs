@@ -9,7 +9,7 @@
 
 <v-card max-width="100%" elevation="24" style="margin-bottom: 3%;" >
     <v-card-title >
-        <span ><%- page.title %></span>
+        <span><%- page.title %></span>
     </v-card-title>
     <v-card-subtitle style="text-align: left;">
         <%- page.description %>
@@ -18,11 +18,14 @@
     <v-chip-group>
         <% if (page.keywords && page.keywords.length){ %>
             <% page.keywords.forEach(function(keyword){ %>	
-                <v-chip outlined color="success lighten-1" class="ma-2"><%- keyword %></v-chip>
+                <v-chip small color="success lighten-1" class="ma-2"><%- keyword %></v-chip>
             <%});%>
         <% } %>
     </v-chip-group>
-    <v-card-text class="text-justify">
-        <%- page.content %>
+    <v-divider class="success"></v-divider>
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <%- page.content %>
+        </div>
     </v-card-text>
 </v-card>
